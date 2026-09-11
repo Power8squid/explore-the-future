@@ -1,0 +1,319 @@
+html, body {
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.skip-link {
+    position: absolute;
+    left: 1rem;
+    top: -3rem;
+    z-index: 20;
+    background: #2F4F4F;
+    color: #E6E6FA;
+    padding: 0.5rem 0.8rem;
+    border-radius: 5px;
+}
+
+.skip-link:focus {
+    top: 1rem;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #D3D3D3; /* Ljusgrå */
+    color: #E6E6FA; /* Ljus lavendel */
+}
+
+header {
+    width: 100%;
+    background-color: #2F4F4F; /* Mörk skiffergrå */
+    margin: 20px auto;        /* Centrerar innehållet när det är mindre än max-width */
+    padding: 20px; /* Lägg till inre avstånd om du vill ha utrymme inom headern */
+    text-align: center;
+    color: #E6E6FA; /* Ljus lavendel */
+}
+
+/* Navigationsmeny */
+header nav {
+    margin-top: 15px;
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+header nav ul li {
+    margin: 0;
+}
+
+header nav ul li a {
+    color: #E6E6FA;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    color: #FF7F50;
+    text-decoration: underline;
+}
+
+.content {
+    box-sizing: border-box; /* Inkludera padding och border i elementets totala bredd */
+    width: 95%; 
+    max-width: 960px;     /* Maximal bredd, t.ex. 1200px */
+    margin: 20px auto;        /* Centrerar innehållet när det är mindre än max-width */
+    padding: 20px;
+    background-color: #2F4F4F; /* Mörk skiffergrå */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    color: #E6E6FA; /* Ljus lavendel */
+}
+
+label {
+    float: left;
+    margin: 10px 0 5px;
+    width: 150px; /* Ger en fast bredd för etiketterna */
+    vertical-align: top; /* Justerar etiketten med inmatningsfältet */
+}
+
+input[type="text"], input[type="email"], textarea {
+    float: left;
+    width: calc(100% - 170px); /* Tar hänsyn till etikettens bredd och marginal */
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #2F4F4F; /* Mörk skiffergrå */
+    border-radius: 5px;
+}
+
+textarea {
+    width: calc(100% - 170px); /* Gör textområdet fullt bredd när det används */
+    height: 100px; /* Fast höjd för textområdet */
+}
+
+button {
+    clear: both; /* Förhindrar att knappen flyter bredvid andra element */
+    background-color: #FF7F50; /* Koral */
+    color: #E6E6FA; /* Ljus lavendel */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    display: block;
+}
+
+button:hover {
+    background-color: #FF6347; /* Lite mörkare koral */
+}
+
+.topics {
+    width: 100%;
+}
+
+.topics-intro {
+    width: 95%;
+    max-width: 960px;
+    margin: 10px auto 0;
+    text-align: center;
+    color: #2F4F4F;
+}
+
+.topics-intro h2 {
+    margin-bottom: 8px;
+}
+
+.topics-intro p {
+    margin-bottom: 0;
+}
+
+.link-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 20px;
+    padding: 28px 20px 40px;
+    background-color: #D3D3D3; /* Ljusgrå */
+}
+
+.link-card {
+    background-color: #2F4F4F; /* Mörk skiffergrå */
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+    width: 320px;
+    max-width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.link-card a,
+.link-card .card-copy-wrap {
+    color: inherit;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.link-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    background-color: #1f3535;
+}
+
+.link-card.is-chart img {
+    object-fit: contain;
+    background-color: #ffffff;
+    padding: 8px;
+}
+
+.link-card h3,
+.link-card h4 {
+    color: #FF7F50; /* Koral */
+    margin: 16px 0 8px;
+    font-size: 1.2em;
+    padding: 0 16px;
+}
+
+.card-copy {
+    padding: 0 18px 20px;
+    text-align: left;
+    flex: 1;
+}
+
+.card-copy h3,
+.card-copy h4 {
+    padding: 0;
+    text-align: center;
+}
+
+.card-copy p {
+    margin-bottom: 0;
+    font-size: 0.98rem;
+    line-height: 1.55;
+    color: #E6E6FA;
+}
+
+.link-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Stil för innehållsförteckning */
+.toc-container {
+    box-sizing: border-box; /* Inkludera padding och border i elementets totala bredd */
+    width: 95%; 
+    max-width: 960px;     /* Maximal bredd, t.ex. 1200px */
+    margin: 20px auto;        /* Centrerar innehållet när det är mindre än max-width */
+    padding: 20px;
+    background-color: #2F4F4F; /* Mörk skiffergrå */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.toc {
+    list-style: none;
+    padding-left: 0;
+}
+
+.toc li {
+    margin-bottom: 10px;
+}
+
+.toc a {
+    color: #FF7F50; /* Koral färg för länkar */
+    text-decoration: none;
+}
+
+.toc a:hover {
+    text-decoration: underline;
+}
+
+/* Stil för scrolla-upp-knappen */
+.scroll-up-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #2F4F4F; /* Mörk skiffergrå */
+    color: #E6E6FA; /* Ljus lavendel */
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 24px;
+    cursor: pointer;
+    display: none; /* Göm knappen tills användaren har scrollat ner */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.scroll-up-button:hover {
+    background-color: #FF7F50; /* Koral */
+}
+
+ul li {
+    margin-bottom: 10px; /* Lägger till 10px mellanrum under varje listpunkt */
+}
+
+ul {
+    margin-left: 20px; /* Justera värdet efter behov */
+    /* Eller använd padding-left istället för margin-left om du föredrar det */
+}
+
+p {
+    margin-bottom: 20px; /* Lägger till 20px mellanrum under varje paragraf */
+}
+
+.text-red {
+    color: red;
+}
+.text-blue {
+    color: blue;
+}
+
+.interest-form {
+    display: grid;
+    gap: 6px;
+}
+
+.interest-form label {
+    float: none;
+    width: auto;
+    margin: 8px 0 0;
+}
+
+.interest-form input[type="text"],
+.interest-form input[type="email"],
+.interest-form textarea {
+    float: none;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+}
+
+.interest-form button {
+    margin-top: 16px;
+}
+
+footer {
+    text-align: center;
+    padding: 24px 16px 32px;
+    color: #2F4F4F;
+}

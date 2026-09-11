@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore the Future</title>
+    <meta name="description" content="Ett nätverk som utforskar samtiden för att bättre förstå framtiden. Läs om ämnen vi har fördjupat oss i, och anmäl ditt intresse.">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <a class="skip-link" href="#innehall">Hoppa till innehållet</a>
+    <header>
+        <h1>Explore the Future</h1>
+        <nav>
+            <ul>
+                <li><a href="#amnen">Ämnen</a></li>
+                <li><a href="#intresse">Anmäl intresse</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="innehall">
+        <div class="content">
+            <h2>Välkommen till vårt ordensällskap, Explore the Future!</h2>
+            <p>Vi är ett dynamiskt nätverk av individer som strävar efter att förstå vår samtid och därigenom bättre förutse framtiden. Genom att förfina våra kommunikationsmetoder och gemensamt utforska nya koncept, främjar vi en atmosfär präglad av öppenhet och nyskapande. Vårt mål är att främja personlig utveckling och fördjupa vår kollektiva kunskap.</p>
+
+            <h3>Våra målsättningar:</h3>
+            <ul>
+                <li>Jobba för en djupare förståelse av nutiden</li>
+                <li>Bättre förutsäga framtida trender och händelser</li>
+                <li>Förbättra kommunikationsförmåga för att utforska idéer</li>
+                <li>Skapa en kultur av öppenhet och nytänkande</li>
+                <li>Främja personlig utveckling</li>
+                <li>Fördjupa vår kunskap inom olika områden</li>
+            </ul>
+
+            <p><strong>Varför ansluta sig till vårt ordensällskap?</strong></p>
+            <p>Vi erbjuder en plats där du kan vara del av en engagerad grupp som aktivt arbetar för att skaffa sig större förståelse för världen omkring oss. Genom regelbundna möten och diskussioner får vi möjlighet att utforska komplexa frågeställningar på djupet och utbyta tankar med likasinnade. Tillsammans skapar vi en atmosfär där högt till tak och djupgående utforskning är normen.</p>
+
+            <h3>Syfte:</h3>
+            <p>Vårt syfte är att samla personer som brinner för att förbättra sin förståelse av nuet och som vill bidra till att förutse och forma framtiden. Vi tror att genom att dela idéer och insikter kan vi alla växa och utvecklas både personligen och intellektuellt.</p>
+
+            <p>Kom och bli en del av vårt inspirerande ordensällskap! Tillsammans kan vi skapa en plattform för lärande, utveckling och innovativt tänkande.</p>
+            <p><strong>Välkommen!</strong></p>
+        </div>
+
+        <section class="topics" id="amnen">
+            <div class="topics-intro">
+                <h2>Ämnen vi utforskar</h2>
+                <p>Här är några av de frågor vi har fördjupat oss i — öppna dörrar in i samtalen, inte färdiga svar.</p>
+            </div>
+            <div class="link-container">
+                <article class="link-card is-chart">
+                    <a href="pages/birthrate.php">
+                        <img src="bilder/birthrate.jpg" alt="Kurva över sjunkande födelsetal från 1950 till 2023">
+                        <div class="card-copy">
+                            <h3>Birth Rate</h3>
+                            <p>Vi har vägt om mänskligheten bör bli fler eller färre — och vad som händer när födelsetalen faller snabbare än någon vågat räkna med. Bakom kurvan finns frågor om framtidstro, familj och vilket samhälle vi vill lämna vidare.</p>
+                        </div>
+                    </a>
+                </article>
+                <article class="link-card">
+                    <a href="pages/ledarskap.php">
+                        <img src="bilder/ledarskap.jpeg" alt="Personer som hjälper varandra upp på en bergstopp">
+                        <div class="card-copy">
+                            <h3>Ledarskap</h3>
+                            <p>Vi har sökt efter vad som egentligen gör en ledare bra, när resultat tar år att synas och mediokerhet kan gömma sig i bruset. Vi tror att tydlig riktning, integritet och modet att kräva mer är hur vi formar bättre ledarskap framåt.</p>
+                        </div>
+                    </a>
+                </article>
+                <article class="link-card">
+                    <div class="card-copy-wrap">
+                        <img src="bilder/forandring.jpg" alt="Träbrickor som bildar orden change och chance">
+                        <div class="card-copy">
+                            <h3>Trygghet i förändring</h3>
+                            <p>Vi lever i en tid där det enda som är säkert är att allt skiftar. Vi utforskar hur trygghet kan byggas mitt i osäkerhet — inte genom att hålla förändringen borta, utan genom att möta den tillsammans med tillit, tydlighet och en gemensam riktning.</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <div class="content" id="intresse">
+            <h2>Anmäl ditt intresse</h2>
+            <p>Vill du vara med i samtalen? Skicka en intresseanmälan så tar vi kontakt, bland annat via Discord.</p>
+            <form id="interestForm" class="interest-form" action="submit_interest.php" method="post">
+                <label for="name">Namn</label>
+                <input type="text" id="name" name="name" autocomplete="name" required>
+
+                <label for="email">E-post</label>
+                <input type="email" id="email" name="email" autocomplete="email" required>
+
+                <label for="discord">Discord-handle</label>
+                <input type="text" id="discord" name="discord" autocomplete="nickname" required>
+
+                <label for="message">Meddelande</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Skicka</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>Explore the Future</p>
+    </footer>
+
+    <script src="https://www.google.com/recaptcha/api.js?render=6LdIizQqAAAAAOMBF2eM7FLNuSgiCYEVnYb1oNF3"></script>
+    <script>
+        grecaptcha.ready(function() {
+            grecaptcha.execute('6LdIizQqAAAAAOMBF2eM7FLNuSgiCYEVnYb1oNF3', {action: 'submit'}).then(function(token) {
+                var form = document.getElementById('interestForm');
+                var recaptchaResponse = document.createElement('input');
+                recaptchaResponse.setAttribute('type', 'hidden');
+                recaptchaResponse.setAttribute('name', 'g-recaptcha-response');
+                recaptchaResponse.setAttribute('value', token);
+                form.appendChild(recaptchaResponse);
+            });
+        });
+    </script>
+</body>
+</html>
