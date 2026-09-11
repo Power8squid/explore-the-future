@@ -4,6 +4,7 @@ if (!isset($basePath)) {
 }
 $homeHref = rtrim($basePath, '/') . '/';
 $cssHref = rtrim($basePath, '/') . '/css/styles.css';
+$showPageTitle = !empty($headerTitle);
 ?>
 <!DOCTYPE html>
 <html lang="sv">
@@ -14,13 +15,16 @@ $cssHref = rtrim($basePath, '/') . '/css/styles.css';
     <link rel="stylesheet" href="<?php echo htmlspecialchars($cssHref); ?>">
 </head>
 <body>
-    <header>
-        <h1><?php echo htmlspecialchars($headerTitle); ?></h1>
-        <nav>
-            <ul>
-                <li><a href="<?php echo htmlspecialchars($homeHref); ?>">Explore the Future</a></li>
-                <li><a href="<?php echo htmlspecialchars($homeHref); ?>#amnen">Ämnen</a></li>
-                <li><a href="<?php echo htmlspecialchars($homeHref); ?>#intresse">Anmäl intresse</a></li>
-            </ul>
+    <a class="skip-link" href="#innehall">Hoppa till innehållet</a>
+    <header class="site-header">
+        <a class="wordmark" href="<?php echo htmlspecialchars($homeHref); ?>">Explore the Future</a>
+        <nav class="site-nav" aria-label="Huvudmeny">
+            <a href="<?php echo htmlspecialchars($homeHref); ?>#amnen">Ämnen</a>
+            <a href="<?php echo htmlspecialchars($homeHref); ?>#intresse">Anmäl intresse</a>
         </nav>
     </header>
+<?php if ($showPageTitle): ?>
+    <div class="page-hero wrap" id="innehall">
+        <h1><?php echo htmlspecialchars($headerTitle); ?></h1>
+    </div>
+<?php endif; ?>
